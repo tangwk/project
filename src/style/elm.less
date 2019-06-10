@@ -1,0 +1,361 @@
+/* element-ui样式覆盖 */
+
+@import './mix.less';
+
+/* side navigation menu */
+.el-submenu__title{
+	height: 36px !important;
+	line-height: 36px !important;
+  color: @tc;
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  i.iconfont{
+    font-size: 21px;
+    margin-right: 10px;
+    color: @tc;
+  }
+  &:hover{
+    .brs(25px);
+    color: @tc;
+    background-color: #f5f5f5;
+  }
+}
+.el-submenu .el-menu-item{
+  .wh(190px,36px);
+  .ft(14px,36px);
+  color: @tc;
+  background-color: @fc;
+  margin: 5px 0;
+  i.iconfont{
+    .sc(10px,#666666);
+    margin-right: 5px;
+  }
+
+  &:hover{
+    color: #666 !important;//=============================================================================================
+    i.iconfont{
+      color: @tc;
+    }
+  }
+  &.is-active {
+    color: #666;//========================================================================================================
+  }
+}
+
+/* bread */
+.el-breadcrumb__inner{
+  .ft(14px,40px) !important;
+  font-family: "微软雅黑";
+  font-weight: normal !important;
+  color: #79ac88 !important;
+}
+
+/* layout */
+.layOutBor{
+  .el-aside{
+    width: 210px;
+    overflow-y: scroll;
+    position: fixed;
+    top: 113px;
+    bottom: 0;
+  }
+  .el-main{
+    padding: 0;
+  }
+}
+
+/* homepage */
+// .homeBor{
+  .el-table::before{
+    height: 0 !important;
+  }
+  .el-table th{
+    height: 47px;
+    border: none !important;
+    padding: 12px 0 !important;
+    .sc(14px,#333333);
+    font-weight: bold;
+  }
+  .el-table td{
+    height: 43px;
+    border: none !important;
+    padding: 10px 0 !important;
+    .sc(14px,#333333);
+  }
+// }
+
+/* PartyUser */
+.PartyBor{
+  .el-form-item__label{
+    line-height: 32px !important;
+  }
+  .el-form-item__content{
+    line-height: 32px !important;
+  }
+  .el-form-item{
+    margin-bottom: 0 !important;
+  }
+  .el-date-editor.el-input{
+    width: 170px;
+  }
+  .el-table th:last-child{
+    min-width: 130px;
+  }
+  .el-table td:last-child{
+    min-width: 130px;
+  }
+}
+
+/* Infor */
+.InforBor{
+  .el-tabs__item.is-active{
+    color: @tc;
+  }
+  .el-tabs__item:hover{
+    color: @tc;
+  }
+  .el-tabs__active-bar{
+    height: 3px;
+    background-color: @tc;
+  }
+  .el-tabs__nav-wrap::after{
+    height: 0;
+  }
+  .el-input__inner{
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+/* power */
+.powerBor{
+  .el-form-item__label{
+    font-size: 15px;
+    padding: 0 10px 0 0;
+  }
+  .el-input__prefix{
+    color: @tc;
+  }
+  .el-input__inner:focus{
+    border-color: @tc;
+  }
+  .el-form-item__label{
+    color: #333333;
+  }
+
+  // .el-table__header tr{}
+  .el-table th{
+    text-align: center;
+  }
+  .el-table th:first-child{
+    width: 100px;
+  }
+  .el-table th .cell{
+    width: 77px;
+  }
+  .el-table td{
+    text-align: center;
+  }
+  .el-table td:first-child{
+    width: 100px;
+    .cell{
+      width: 77px;
+    }
+  }
+  .el-table--border{
+    border-bottom: 1px solid #ebeef5 ;
+  }
+  .el-table{
+    height: 285px;
+  }
+
+  .el-tree{
+    margin-top: 20px;
+    height: 350px;
+    overflow-y: scroll;
+  }
+}
+
+/* input框 */
+.el-input__inner{
+  height: 32px;
+  line-height: 32px;
+}
+.el-input__inner:hover{
+  border-color: #c0c4cc;
+}
+.el-input__inner:focus{
+  border-color: @tc;
+}
+
+.el-select .el-input.is-focus .el-input__inner{
+  border-color: @tc;
+}
+.el-select .el-input__inner:focus{
+  border-color: @tc;
+}
+
+.el-input__icon{
+  line-height: 32px;
+}
+
+.el-textarea__inner:focus{
+  border-color: @tc;
+}
+.el-textarea__inner:hover{
+  border-color: #c0c4cc;
+}
+
+/* msgLook */
+.msgLookBor{
+  .el-input{
+    .el-input__inner{
+      text-align: center;
+      border: none;
+    }
+  }
+  .title{
+    .el-input__inner{
+      color: #990033;
+      font-weight: bold;
+    }
+  }
+  .title2{
+    .el-input__inner{
+      color: #990033;
+    }
+  }
+}
+
+/* el-button */
+.el-button{
+  // .wh(80px,32px);
+  // line-height: 32px;
+  padding: 0 25px;
+  height: 32px;
+  color: #999999;
+  &:active{
+    color: #999999;
+    background-color: @bc;
+    border-color: #c6e2ff;
+  }
+  &:hover{
+    color: #999999;
+    background-color: @bc;
+    border-color: #ecf5ec;
+  }
+  &:focus{
+    color: #999999;
+    background-color: @bc;
+    border-color: #ecf5ec;
+  }
+}
+/* map el-button */
+.el-button--primary{
+  color: @fc;
+  background-color: @tbc;
+  border-color: @tbc;
+  &:active{
+    color: @fc;
+    background-color: @tc;
+    border-color: @tc;
+  }
+  &:hover{
+    color: @fc;
+    background-color: @tc;
+    border-color: @tc;
+  }
+  &:focus{
+    color: @fc;
+    background: @tc;
+    background-color: @tc;
+    border-color: @tc;
+  }
+}
+
+/* table tr:hover>td */
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+  background-color: #eef4f0;
+}
+.el-table__body tr.current-row>td{
+  background-color: #eef4f0;
+}
+
+
+.el-table--border{
+  border: none;
+}
+
+/* weMenu */
+.weBor{
+  .el-form-item__content{
+    width: 480px;
+  }
+  .el-input{
+    width: 240px;
+  }
+  .el-input__inner{
+    width: 240px;
+  }
+  .label{
+    .el-form-item__label{
+      width: 120px !important;
+    }
+  }
+  .el-radio__input.is-checked .el-radio__inner{
+    border-color: @tbc;
+    background: @tbc;
+  }
+  .el-radio__input.is-checked+.el-radio__label{
+    color: @tbc;
+  }
+  .el-table__header,.el-table__body{
+    width: 100% !important;
+  }
+  .el-table--border{
+    border: 1px solid #ebeef5 !important;
+  }
+  .el-table th{
+    height: 36px;
+    padding: 6px 0 !important;
+  }
+  .save{
+    .el-form-item__content{
+      margin-left: 0px !important;
+    }
+  }
+}
+
+/*  articleSectionLook / videoSectionLook  */
+.bgTop .el-table tr{
+  background: #f0f9eb;
+}
+
+/* uploadVideo */
+.el-dialog{
+  width: 655px;
+}
+.dialog .el-input__inner{
+  width: 450px;
+}
+
+/* 弹窗灰屏样式取消 */
+.v-modal{
+  position: static;
+}
+
+/* videoLook */
+.newsvidBor{
+  .el-input__inner{
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent !important;
+  }
+}
+
+/* 复选框颜色 */
+.el-checkbox__inner{
+  border: 1px solid #868686 !important;
+}

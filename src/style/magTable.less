@@ -1,0 +1,187 @@
+.boxBor,.PartyBor,.powerBor,.messageBor,.msgLookBor,.weBor,.chartBor{
+  width: 100%;
+  height: calc(100% - 15px);
+  .crumbs{
+    height: 40px;
+    margin: 10px 10px 10px 15px;
+    background-color: @fc;
+  }
+  .user{
+    margin: 10px 10px 10px 15px;
+    background-color: @fc;
+    height: calc(100% - 60px);
+    overflow-y: scroll;
+    .brs(5px);
+    .userListBor{
+      .wh(100%,calc(100% - 116px));
+      min-width: 965px;
+      padding: 0 20px;
+      box-sizing: border-box;
+      .userList{
+        .wh(100%,32px);
+        margin-top: 15px;
+        margin-bottom: 20px;
+        .actBtn{
+          height: 32px;
+          .newAdd{
+            // .wh(80px,32px);
+            padding: 8px 22px 7px;
+            .sc(13px,@fc);
+            background-color: @tbc;
+            .brs(3px);
+            cursor: pointer;
+            margin-left: 16px;
+            margin-right: 15px;
+            &:hover{
+              background-color: @tc;
+            }
+          }
+        }
+        .fillIn{
+          height: 32px;
+          li{
+            float: left;
+            margin-right: 20px;
+            .ft(14px,32px);
+            color: #999999;
+            label{
+              color: #48576a;
+            }
+            input,select{
+              width: 170px !important;
+              height: 32px !important;
+              border: 1px solid #cccccc;
+              .brs(3px);
+              .ft(14px,32px);
+              color: #333333;
+              outline: none;
+              text-indent: 5px;
+              box-sizing: border-box;
+            }
+            &:last-child button{
+              .wh(80px,32px);
+              .ft(14px,32px);
+              color: #999999;
+              border: none;
+              outline: none;
+              .brs(3px);
+              cursor: pointer;
+              background-color: #eeeeee;
+              &:hover{
+                background-color: #cccccc;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 表格操作栏
+    .cell{
+      i{
+        display: inline-block;
+        margin: 0 15px;
+        font-size: 18px;
+        cursor: pointer;
+        &:first-child{
+          color: #999999;
+          &:hover{
+            color: @tc;
+          }
+        }
+        &:nth-child(2){
+          color: #999999;
+          &:hover{
+            color: #0089cc;
+          }
+        }
+        &:last-child{
+          color: #999999;
+          &:hover{
+            color: @dc;
+          }
+        }
+      }
+    }
+    // 分页
+    .block{
+      float: right;
+      margin: 20px 60px 0 0;
+      overflow: hidden;
+    }
+  }
+  // 确认删除弹窗
+  .dataDel{
+    .wh(100%,100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    .sureDel{
+      .wh(360px,200px);
+      .brs(4px);
+      background-color: @fc;
+      .ctf(360px,200px);
+      z-index: 999;
+      .titleDel{
+        .wh(100%,35px);
+        border-bottom: 2px solid @tc;
+        p{
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          display: inline-block;
+          .ft(13px,35px);
+          color: @tc;
+          text-indent: 10px;
+          letter-spacing: 1px;
+        }
+        i{
+          float: right;
+          margin: 8px 6px 0 0;
+          cursor: default;
+          &:hover{
+            color: @dc;
+          }
+        }
+      }
+      h3{
+        .wh(100%,120px);
+        .ft(14px,120px);
+        text-align: center;
+        font-weight: normal;
+        color: #666666;
+      }
+      p{
+        .wh(100%,24px);
+        text-align: center;
+        button{
+          .wh(60px,24px);
+          outline: none;
+          border: none;
+          .brs(3px);
+          .sc(12px,@fc);
+          background-color: #cccccc;
+          cursor: pointer;
+          &:first-child{
+            background-color: @tbc;
+            margin-right: 45px;
+            &:hover{
+              background-color: @tc;
+            }
+          }
+          &:last-child{
+            &:hover{
+              background-color: #bbbbbb;
+            }
+          }
+        }
+      }
+    }
+    .opacityDel{
+      .wh(100%,100%);
+      background-color: #cccccc;
+      opacity: 0.5;
+    }
+  }
+
+}
